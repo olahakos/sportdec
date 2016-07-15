@@ -9,9 +9,3 @@ dependencies:
 test:
   override:
     - npm test
-
-deployment:
-  master:
-    branch: master
-    commands:
-      - echo 'OK'
