@@ -1,40 +1,25 @@
 import React, { Component } from 'react';
-import {View} from 'react-native';
+import {NavigatorIOS} from 'react-native';
 
-import {tabs} from '../../config';
-import Header from '../../components/Header/Header';
+import {tabConfig} from '../../config';
 import styles from './Main.style';
-import Welcome from '../../components/Welcome/Welcome';
-
-var ScrollableTabView;
+import Tab from '../../components/Tab/Tab';
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    ScrollableTabView = props.ScrollableTabView;
-  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Header
-          title='Premier League'
-        />
-        <ScrollableTabView
-          style={styles.tabView}
-          initialPage={2}
-        >
-          <Welcome tabLabel={tabs[0].toUpperCase()} />
-          <Welcome tabLabel={tabs[1].toUpperCase()} />
-          <Welcome tabLabel={tabs[2].toUpperCase()} />
-        </ScrollableTabView>
-      </View>
-      // <NavigatorIOS
-      //   initialRoute={{
-      //     component: Welcome,
-      //     title: 'SportDec'
-      //   }}
-      //   style={styles.navigator}
-      // />
+      <NavigatorIOS
+        initialRoute={{
+          component: Tab,
+          title: `${tabConfig.tabs[tabConfig.active]}`,
+          passProps: {
+            tabConfig: tabConfig,
+            ScrollableTabView: this.props.ScrollableTabView
+          }
+        }}
+        style={styles.container}
+      />
     );
   }
 }
