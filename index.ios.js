@@ -6,13 +6,14 @@
 
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
 
-import Welcome from './src/components/Welcome/Welcome';
+import Main from './src/views/Main/Main';
 
 class sportdec extends Component {
   render() {
     return (
-      <Welcome />
+      <Main ScrollableTabView={ScrollableTabView} />
     );
   }
 }
