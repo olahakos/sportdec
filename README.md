@@ -26,8 +26,9 @@ To run your application you gonna need Xcode too. The The easiest way to install
 
 These the tools what I used in this project:
 
-- [ESlint](http://eslint.org/)
--
+- [ESlint](http://eslint.org/): Linter to
+- [pre-commit](https://github.com/jish/pre-commit): You can't commit without running the unit tests, and checking the linter styles.
+
 
 # Testing
 
