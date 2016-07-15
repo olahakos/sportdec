@@ -1,4 +1,5 @@
 # SPORTDEC homework
+[![CircleCI](https://circleci.com/gh/olahakos/sportdec.svg?style=svg)](https://circleci.com/gh/olahakos/sportdec)
 
 ## Dependencies
 
