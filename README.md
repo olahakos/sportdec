@@ -30,7 +30,7 @@ These the tools what I used in this project:
 
 # Testing
 
-I used [Mocha](https://mochajs.org/) instead of the default Jest framework. [Here](https://blog.formidable.com/unit-testing-react-native-with-mocha-and-enzyme-51518f13ba73#.to7net7f0) you can find a really great article how to setup this testing environment.
+I used [Mocha](https://mochajs.org/) instead of the default Jest framework. [Here](https://medium.com/@thisbejim/testing-react-native-components-with-enzyme-d46bf735540#.d0f9rnwru) you can find a really great article how to setup this testing environment.
 
 - [Mocha](https://mochajs.org/): JS testing framework
 - [Chai](http://chaijs.com/): Assertion library
