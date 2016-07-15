@@ -19,3 +19,19 @@ npm install
 ```
 
 To run your application you gonna need Xcode too. The The easiest way to install it is via the [Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+
+
+## Tools
+
+These the tools what I used in this project:
+
+- [ESlint](http://eslint.org/)
+-
+
+# Testing
+
+I used [Mocha](https://mochajs.org/) instead of the default Jest framework. [Here](https://blog.formidable.com/unit-testing-react-native-with-mocha-and-enzyme-51518f13ba73#.to7net7f0) you can find a really great article how to setup this testing environment.
+
+- [Mocha](https://mochajs.org/): JS testing framework
+- [Chai](http://chaijs.com/): Assertion library
+- [Enzyme](https://github.com/airbnb/enzyme): React testing utility
