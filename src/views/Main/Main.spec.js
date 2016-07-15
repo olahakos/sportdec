@@ -6,16 +6,11 @@ import Main from './Main';
 
 describe('<Main/>', () => {
   let wrapper;
-  let ScrollableTabViewMock = 'View';
   beforeEach(() => {
-    wrapper = shallow(<Main ScrollableTabView={ScrollableTabViewMock}/>);
+    wrapper = shallow(<Main/>);
   });
-  it('should have a Header component', () => {
-    expect(wrapper.find('Header'))
+  it('should have a NavigatorIOS components', () => {
+    expect(wrapper.find('NavigatorIOS'))
       .to.have.length(1);
-  });
-  it('should have load 3 Welcome components', () => {
-    expect(wrapper.find('Welcome'))
-      .to.have.length(3);
   });
 });

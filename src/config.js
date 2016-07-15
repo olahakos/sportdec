@@ -9,13 +9,18 @@ config.port = process.env.PORT || 8081;
 
 config.colors = {
   white: '#fff',
-  purple: '#443251'
+  purple: '#443251',
+  lightBlue: '#04cbc2',
+  grey: '#999'
 };
 
-config.tabs = [
-  'Fixtures',
-  'Table',
-  'News'
-];
+config.tabConfig = {
+  active: 2,
+  tabs: [
+    'Fixtures',
+    'Table',
+    'News'
+  ]
+};
 
 module.exports = config;
