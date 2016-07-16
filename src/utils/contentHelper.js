@@ -22,12 +22,12 @@ function validateArticle(res) {
 }
 
 function getJSON(source) {
-  if (validator.isURL(source)) {
+  if (typeof source === 'string' && validator.isURL(source)) {
     // The source is an URL
     return 'url handeling';
   } else {
     // The source is a path
-    return require(source);
+    return source;
   }
 }
 

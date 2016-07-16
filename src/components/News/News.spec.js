@@ -1,5 +1,3 @@
-const path = require('path');
-
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
@@ -13,16 +11,16 @@ describe('<News/>', () => {
   beforeEach(() => {
     wrapper = shallow(<News title={titleTest} />);
   });
-  it('should have a View component', () => {
-    expect(wrapper.find('View'))
+  it('should have a ListView component', () => {
+    expect(wrapper.find('ListView'))
       .to.have.length(1);
   });
 });
 
 describe('getContent()', () => {
-  const pathSource = path.resolve('mock/news-mock.json');
-  const pathSourceArticle = path.resolve('mock/article-mock.json');
-  const emptyPathSource = path.resolve('mock/empty.json');
+  const pathSource = require('../../../mock/news-mock.json');
+  const pathSourceArticle = require('../../../mock/article-mock.json');
+  const emptyPathSource = require('../../../mock/empty.json');
   const httpSource = 'http://some.dummy.com/asd.json';
   const httpsSource = 'https://some.dummy.com/asd.json';
 

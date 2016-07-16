@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import {colors} from '../../config';
 import styles from './Tab.style';
+import News from '../News/News';
 import Welcome from '../Welcome/Welcome';
 
 var ScrollableTabView;
@@ -28,7 +29,7 @@ class Tab extends Component {
       >
         <Welcome tabLabel={this.state.tabs[0].toUpperCase()} />
         <Welcome tabLabel={this.state.tabs[1].toUpperCase()} />
-        <Welcome tabLabel={this.state.tabs[2].toUpperCase()} />
+        <News tabLabel={this.state.tabs[2].toUpperCase()} />
 
       </ScrollableTabView>
     );

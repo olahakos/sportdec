@@ -3,7 +3,7 @@
 
 ---
 
-## Dependencies
+## Start the app
 
 The application has been written in REACT Native. The first step to build our code is, to install the dependencies. Now we gonna work only with the iOS version on Mac, but you can find the documentation of other configurations  [here](https://facebook.github.io/react-native/docs/getting-started.html#content).
 
@@ -19,6 +19,11 @@ Let's install the npm packeges.
 
 ```
 npm install
+```
+
+After installing the dependencies we can start our test environment with the following command:
+```
+react-native run-ios
 ```
 
 To run your application you gonna need Xcode too. The The easiest way to install it is via the [Mac App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
@@ -42,11 +47,7 @@ I made 2 dummy files with the initial datas here:
 /mock/article-mock.json
 ```
 
-You can override these paths with these environment variables:
-```
-DATA_NEWS=/path/to/original-news.json
-DATA_ARTICLE=/path/to/original-article.json
-```
+You can override these files, or add new ones in the `src/config.js` file.
 
 ---
 

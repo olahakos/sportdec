@@ -5,10 +5,6 @@ module.exports = StyleSheet.create({
     flex: 1,
     flexDirection: 'column'
   },
-  header: {
-    height: 150,
-    marginTop: 20
-  },
   tabView: {
     flex: 1
   }
