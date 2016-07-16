@@ -26,6 +26,10 @@ describe('<Tab/>', () => {
   });
   it('should have load the given Welcome components', () => {
     expect(wrapper.find('Welcome'))
-      .to.have.length(tabConfigMock.tabs.length);
+      .to.have.length(tabConfigMock.tabs.length - 1);
+  });
+  it('should have one News components', () => {
+    expect(wrapper.find('News'))
+      .to.have.length(1);
   });
 });
