@@ -1,9 +1,13 @@
 const _ = require('lodash');
 import React, { Component } from 'react';
 import {
-  ListView
+  ListView,
+  RecyclerViewBackedScrollView,
+  TouchableHighlight,
+  View
 } from 'react-native';
 
+import Article from '../Article/Article';
 import {datas} from '../../config';
 import {getContent} from '../../utils/contentHelper';
 import NewsElement from '../NewsElement/NewsElement';
@@ -26,39 +30,42 @@ class News extends Component {
     return (
       <ListView
           dataSource={this.state.dataSource}
-          renderRow={(rowData) => <NewsElement data={rowData}/>}
+          renderRow={this._renderExRow.bind(this)}
+          renderScrollComponent={props => <RecyclerViewBackedScrollView {...props} />}
           style={styles.lv}
         />
     );
   }
 
-  _genRows(news, pressData) {
-    var dataBlob = [];
-    for (var ii = 0; ii < news.length; ii++) {
-      var pressedText = pressData[ii] ? ' (pressed)' : '';
-      dataBlob.push('Row ' + ii + pressedText);
-    }
-    return dataBlob;
+  _pressRow(rowID) {
+    const article = getContent(datas.article);
+    this.props.navigator.push({
+      title: article.shortHeadline,
+      component: Article,
+      passProps: {article: article}
+    });
   }
 
   _renderRow(rowData, sectionID, rowID, highlightRow) {
-    // var rowHash = Math.abs(hashCode(rowData));
-    // var imgSource = THUMB_URLS[rowHash % THUMB_URLS.length];
-    // return (
-    //   <TouchableHighlight onPress={() => {
-    //       this._pressRow(rowID);
-    //       highlightRow(sectionID, rowID);
-    //     }}>
-    //     <View>
-    //       <View style={styles.row}>
-    //         <Image style={styles.thumb} source={imgSource} />
-    //         <Text style={styles.text}>
-    //           {rowData + ' - ' + LOREM_IPSUM.substr(0, rowHash % 301 + 10)}
-    //         </Text>
-    //       </View>
-    //     </View>
-    //   </TouchableHighlight>
-    // );
+    return (
+      <TouchableHighlight onPress={highlightRow}>
+        <View>
+          <NewsElement data={rowData}/>
+        </View>
+      </TouchableHighlight>
+    );
+  }
+
+  _renderExRow(example, sectionID, rowID, highlightRow) {
+    return this._renderRow(
+      example,
+      sectionID,
+      rowID,
+      () => {
+        this._pressRow(rowID);
+        highlightRow(rowID);
+      }
+    );
   }
 }
 

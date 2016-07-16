@@ -6,18 +6,21 @@ import {
 } from 'react-native';
 
 import {calculateTimeDiff} from '../../utils/dateHelper';
-import styles from './NewsElement.style';
+import styles from './Article.style';
 
-class NewsElement extends Component {
+class Article extends Component {
   constructor(props) {
     super(props);
+    // console.log(props.article);
     this.state = {
-      headline: props.data.headline,
-      image: props.data.links
+      article: props.article,
+      body: props.article.body,
+      headline: props.article.headline,
+      time: calculateTimeDiff(props.article.publishedTime),
+      image: props.article.links
         .find(item => (item.rel === 'IMAGE_MOBILE'))
         .url
-        .replace('http://', 'https://'),
-      time: calculateTimeDiff(props.data.publishedTime)
+        .replace('http://', 'https://')
     };
   }
   render() {
@@ -27,18 +30,23 @@ class NewsElement extends Component {
           source={{uri: this.state.image}}
           style={styles.thumbnail}
         >
+          <Text style={styles.time}>
+            {this.state.time}
+          </Text>
           <View style={styles.coaptionCnt} >
             <Text style={styles.headline}>
               {this.state.headline}
             </Text>
-            <Text style={styles.subHeadline}>
-              {this.state.time}
-            </Text>
           </View>
         </Image>
+        <View>
+          <Text>
+            {this.state.body}
+          </Text>
+        </View>
       </View>
     );
   }
 }
 
-export default NewsElement;
+export default Article;

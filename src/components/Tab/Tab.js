@@ -29,7 +29,10 @@ class Tab extends Component {
       >
         <Welcome tabLabel={this.state.tabs[0].toUpperCase()} />
         <Welcome tabLabel={this.state.tabs[1].toUpperCase()} />
-        <News tabLabel={this.state.tabs[2].toUpperCase()} />
+        <News
+          tabLabel={this.state.tabs[2].toUpperCase()}
+          navigator={this.props.navigator}
+        />
 
       </ScrollableTabView>
     );
