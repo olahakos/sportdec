@@ -14,9 +14,12 @@ class Tab extends Component {
     this.state = {
       title: props.title,
       active: props.tabConfig.active,
-      tabs: props.tabConfig.tabs
+      tabs: props.tabConfig.tabs,
+      isSearch: props.isSearch
     };
+    this._news = News;
   }
+
   render() {
     return (
       <ScrollableTabView
@@ -30,8 +33,10 @@ class Tab extends Component {
         <Welcome tabLabel={this.state.tabs[0].toUpperCase()} />
         <Welcome tabLabel={this.state.tabs[1].toUpperCase()} />
         <News
+          ref={(news) => { this._news = news; }}
           tabLabel={this.state.tabs[2].toUpperCase()}
           navigator={this.props.navigator}
+          store={this.props.store}
         />
 
       </ScrollableTabView>

@@ -12,14 +12,15 @@ config.datas = {
   article: require('../mock/article-mock.json')
 };
 
-config.imageBase = process.env.IMAGE_BASE_URL || 'http://google.com/';
-
 config.colors = {
   white: '#fff',
   purple: '#443251',
   lightBlue: '#04cbc2',
   grey: '#999',
-  purple50: (0x443251aa)
+  purple50: (0x443251aa),
+  darkWhite: '#F5FCFF',
+  darkGray: '#333333',
+  lightGray: '#CCCCCC'
 };
 
 config.tabConfig = {

@@ -7,11 +7,22 @@ import News from './News';
 
 describe('<News/>', () => {
   let wrapper;
+  const storeMock = {
+    subscribe: () => {}
+  };
   beforeEach(() => {
-    wrapper = shallow(<News />);
+    wrapper = shallow(<News store={storeMock} />);
   });
-  it('should have a ListView component', () => {
-    expect(wrapper.find('ListView'))
+  it('should have a ScrollView component', () => {
+    expect(wrapper.find('ScrollView'))
+      .to.have.length(1);
+  });
+  it('should have a Search field', () => {
+    expect(wrapper.find('TextInput'))
+      .to.have.length(1);
+  });
+  it('should have an EmptyView if we have no data', () => {
+    expect(wrapper.find('EmptyView'))
       .to.have.length(1);
   });
 });

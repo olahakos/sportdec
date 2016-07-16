@@ -11,10 +11,10 @@ class Welcome extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          This Page is under construction!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+          On Emulator you have these options:
         </Text>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
