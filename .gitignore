@@ -41,3 +41,6 @@ android/app/libs
 android/keystores/debug.keystore
 
 node_modules
+
+mock/news-articles-feed.json
+mock/single-news-article.json
