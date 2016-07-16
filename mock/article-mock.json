@@ -1,0 +1,91 @@
+{
+   "publishedTime":1459348530000,
+   "headline":"Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+   "shortHeadline":"Lorem ipsum dolor sit amet",
+   "teaser":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+   "body":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <p>\"Lorem ipsum dolor sit amet, consectetur,\" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+   "externalUrl":null,
+   "byLine":"Lorem Ipsum",
+   "authors":[
+
+   ],
+   "keywords":[
+     {
+         "id": 1,
+         "keyword": "Key 1",
+         "typeName": "Type 1",
+         "type": 1
+     },
+     {
+         "id": 2,
+         "keyword": "Key 2",
+         "typeName": "Type 2",
+         "type": 2
+     }
+   ],
+   "categories":[
+
+   ],
+   "lastUpdateTime":1459348540000,
+   "links":[
+     {
+         "rel": "IMAGE_MOBILE",
+         "href": "urn:perform:image:uuid:123",
+         "url": "http://talksport.com/sites/default/files/styles/large/public/field/image/201606/gettyimages-538226802.jpg?itok=RUa7ZE4u",
+         "altText": "Alt text",
+         "caption": "This is a caprion",
+         "credit": "Getty Images",
+         "source": "Getty Images",
+         "id": "123",
+         "type": "image",
+         "ord": 1
+     },
+     {
+         "rel": "IMAGE_HEADER",
+         "href": "urn:perform:image:uuid:123",
+         "url": "http://talksport.com/sites/default/files/styles/large/public/field/image/201606/gettyimages-538226802.jpg?itok=RUa7ZE4u",
+         "altText": "Alt text",
+         "caption": "This is a caprion",
+         "credit": "Getty Images",
+         "source": "Getty Images",
+         "id": "123",
+         "type": "image",
+         "ord": 1
+     },
+     {
+         "rel": "IMAGE_SOURCE",
+         "href": "urn:perform:image:uuid:123",
+         "url": "http://talksport.com/sites/default/files/styles/large/public/field/image/201606/gettyimages-538226802.jpg?itok=RUa7ZE4u",
+         "altText": "Alt text",
+         "caption": "This is a caprion",
+         "credit": "Getty Images",
+         "source": "Getty Images",
+         "id": "123",
+         "type": "image",
+         "ord": 1
+     },
+     {
+         "rel": "IMAGE_TEASER",
+         "href": "urn:perform:image:uuid:123",
+         "url": "http://talksport.com/sites/default/files/styles/large/public/field/image/201606/gettyimages-538226802.jpg?itok=RUa7ZE4u",
+         "altText": "Alt text",
+         "caption": "This is a caprion",
+         "credit": "Getty Images",
+         "source": "Getty Images",
+         "id": "123",
+         "type": "image",
+         "ord": 1
+      },
+      {
+         "rel":"Related",
+         "href":"urn:perform:article:uuid:123",
+         "id":"123",
+         "type":"article",
+         "properties":{
+            "title":null
+         }
+      }
+   ],
+   "id":"123",
+   "moreLink":null
+}
