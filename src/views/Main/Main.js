@@ -22,6 +22,7 @@ class Main extends Component {
         style={styles.container}
         titleTextColor={colors.white}
         barTintColor={colors.purple}
+        tintColor={colors.white}
       />
     );
   }

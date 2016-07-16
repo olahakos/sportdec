@@ -25,6 +25,7 @@ describe('<NewsElement/>', () => {
     ],
     'links': [
       {
+        'rel': 'IMAGE_MOBILE',
         'url': 'http://talksport.com/sites/default/files/styles/large/public/field/image/201606/gettyimages-538226802.jpg?itok=RUa7ZE4u'
       }
     ],

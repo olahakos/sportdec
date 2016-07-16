@@ -7,9 +7,8 @@ import News from './News';
 
 describe('<News/>', () => {
   let wrapper;
-  let titleTest = 'Premier League';
   beforeEach(() => {
-    wrapper = shallow(<News title={titleTest} />);
+    wrapper = shallow(<News />);
   });
   it('should have a ListView component', () => {
     expect(wrapper.find('ListView'))
