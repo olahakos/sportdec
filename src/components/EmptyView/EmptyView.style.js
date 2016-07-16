@@ -9,7 +9,7 @@ module.exports = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.darkWhite
   },
-  welcome: {
+  title: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10

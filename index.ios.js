@@ -1,18 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 
-import Welcome from './src/components/Welcome/Welcome';
+import Main from './src/views/Main/Main';
 
 class sportdec extends Component {
   render() {
     return (
-      <Welcome />
+      // I'm using dependency injection here, to make the testing easier.
+      <Main ScrollableTabView={require('react-native-scrollable-tab-view')} />
     );
   }
 }
