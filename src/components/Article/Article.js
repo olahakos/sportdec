@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   Image,
+  ScrollView,
   Text,
   View
 } from 'react-native';
@@ -11,10 +12,11 @@ import styles from './Article.style';
 class Article extends Component {
   constructor(props) {
     super(props);
-    // console.log(props.article);
     this.state = {
       article: props.article,
-      body: props.article.body,
+      body: props.article.body
+        .replace(/<p>/gi, '')
+        .replace(/<\/p> ?/gi, '\n\n'),
       headline: props.article.headline,
       time: calculateTimeDiff(props.article.publishedTime),
       image: props.article.links
@@ -25,26 +27,24 @@ class Article extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Image
-          source={{uri: this.state.image}}
-          style={styles.thumbnail}
-        >
-          <Text style={styles.time}>
-            {this.state.time}
-          </Text>
-          <View style={styles.coaptionCnt} >
-            <Text style={styles.headline}>
-              {this.state.headline}
-            </Text>
-          </View>
-        </Image>
-        <View>
-          <Text>
-            {this.state.body}
-          </Text>
+      <ScrollView style={styles.container}>
+        <View style={styles.imgCnt}>
+          <Image
+            source={{uri: this.state.image}}
+            style={styles.thumbnail}
+          >
+            <Text style={styles.time}>{this.state.time}</Text>
+          </Image>
         </View>
-      </View>
+        <View style={styles.innerCnt}>
+          <View>
+            <Text style={styles.headline}>{this.state.headline}</Text>
+          </View>
+          <View>
+            <Text>{this.state.body}</Text>
+          </View>
+        </View>
+      </ScrollView>
     );
   }
 }
