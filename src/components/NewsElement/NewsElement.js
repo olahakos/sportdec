@@ -20,6 +20,20 @@ class NewsElement extends Component {
       time: calculateTimeDiff(props.data.publishedTime)
     };
   }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (this.state.headline !== nextProps.data.headline) {
+      this.setState({
+        headline: nextProps.data.headline,
+        image: nextProps.data.links
+          .find(item => (item.rel === 'IMAGE_MOBILE'))
+          .url
+          .replace('http://', 'https://'),
+        time: calculateTimeDiff(nextProps.data.publishedTime)
+      });
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
