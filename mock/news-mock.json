@@ -1,6 +1,6 @@
 [
     {
-        "publishedTime": 1459348530000,
+        "publishedTime": 1459348510000,
         "headline": "Headline",
         "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "keywords": [
@@ -71,7 +71,7 @@
         "id": "1"
     },
     {
-        "publishedTime": 1459348540000,
+        "publishedTime": 1459348560000,
         "headline": "Headline 2",
         "teaser": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.",
         "keywords": [

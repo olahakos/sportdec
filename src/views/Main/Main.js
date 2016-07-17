@@ -31,7 +31,9 @@ class Main extends Component {
           passProps: {
             tabConfig: tabConfig,
             ScrollableTabView: this.props.ScrollableTabView,
-            store: this.store
+            store: this.store,
+            MenuContext: this.props.MenuContext,
+            FilterMenu: this.props.FilterMenu
           }
         }}
         style={styles.container}

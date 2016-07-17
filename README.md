@@ -8,7 +8,7 @@ I chose React Native for this assignment, because I think this is the best solut
 **Search**
 
 I placed a search bar hidden at the top of the listing page. You can reach it, if you scroll down a bit, or with tapping the "Search" button at the top. Here you can search in the articles headline.
-With the filter button you can select specific order to show the list, or filter based on the given tags.
+With the sorting button you can select specific order to show the list of articles.
 
 **UX changes**
 
@@ -54,6 +54,8 @@ These the tools what I used in this project:
 - [ESlint](http://eslint.org/): Linter to
 - [pre-commit](https://github.com/jish/pre-commit): You can't commit without running the unit tests, and checking the linter styles.
 - [Redux](http://redux.js.org/index.html): It makes the communication easy between two components.
+- [Git Flow](https://github.com/nvie/gitflow): Makes you git repository clean, and readable.
+- [RNPM](https://github.com/rnpm/rnpm): React Native Package Manager - Really useful tool to keep our dependencies linked.
 
 ---
 
