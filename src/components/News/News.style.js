@@ -5,7 +5,11 @@ import {colors} from '../../config';
 module.exports = StyleSheet.create({
   inputCnt: {
     height: 40,
-    backgroundColor: colors.darkWhite
+    maxHeight: 40,
+    backgroundColor: colors.darkWhite,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   textInput: {
     padding: 8,
@@ -13,7 +17,8 @@ module.exports = StyleSheet.create({
     fontSize: 14,
     height: 30,
     borderRadius: 8,
-    backgroundColor: colors.lightGray
+    backgroundColor: colors.lightGray,
+    flex: 1
   },
   newsCnt: {
     marginTop: 65,

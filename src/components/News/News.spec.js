@@ -11,7 +11,7 @@ describe('<News/>', () => {
     subscribe: () => {}
   };
   beforeEach(() => {
-    wrapper = shallow(<News store={storeMock} />);
+    wrapper = shallow(<News store={storeMock} MenuContext='View' FilterMenu='View' />);
   });
   it('should have a ScrollView component', () => {
     expect(wrapper.find('ScrollView'))

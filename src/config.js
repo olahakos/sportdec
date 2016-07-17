@@ -32,4 +32,23 @@ config.tabConfig = {
   ]
 };
 
+config.sorting = [
+  {
+    type: 'ABC_ASC',
+    text: 'By Headline ASC'
+  },
+  {
+    type: 'ABC_DESC',
+    text: 'By Headline DESC'
+  },
+  {
+    type: 'DATE_ASC',
+    text: 'By Date ASC'
+  },
+  {
+    type: 'DATE_DESC',
+    text: 'By Date DESC'
+  }
+];
+
 module.exports = config;
