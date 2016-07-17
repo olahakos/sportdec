@@ -1,4 +1,3 @@
-const _ = require('lodash');
 import React, { Component } from 'react';
 import {
   ListView,
@@ -21,13 +20,11 @@ class News extends Component {
   constructor(props) {
     super(props);
     const news = getContent(datas.news);
-    if (!_.isArray(news)) {
-      throw news.error;
-    }
+
     this._scrollView = ScrollView;
     this._textInput = TextInput;
 
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.id !== r2.id});
     this.state = {
       dataSource: ds.cloneWithRows(news),
       news: news,
@@ -47,20 +44,20 @@ class News extends Component {
     this._scrollView.scrollTo({y: 45});
   }
 
-  componentWillUpdate(nextProps, nextState) {
-    if (this.state.text !== nextState.text) {
-      var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.text !== prevState.text) {
+      const filteredNews = this.state.news.filter(row => {
+        return validator.contains(row.headline, this.state.text);
+      });
       this.setState({
-        dataSource: ds.cloneWithRows(nextState.news.filter(row =>
-          (validator.contains(row.headline, nextState.text))
-        ))
+        dataSource: this.state.dataSource.cloneWithRows(filteredNews)
       });
     }
   }
 
   render() {
     let list;
-    if (this.state.dataSource._dataBlob.s1 && this.state.dataSource._dataBlob.s1.length > 0) {
+    if (this.state.dataSource.getRowCount() > 0) {
       list =
         <ListView
           dataSource={this.state.dataSource}
