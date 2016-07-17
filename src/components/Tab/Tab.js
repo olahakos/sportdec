@@ -37,6 +37,8 @@ class Tab extends Component {
           tabLabel={this.state.tabs[2].toUpperCase()}
           navigator={this.props.navigator}
           store={this.props.store}
+          MenuContext={this.props.MenuContext}
+          FilterMenu={this.props.FilterMenu}
         />
 
       </ScrollableTabView>
